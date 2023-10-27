@@ -6,69 +6,85 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            margin: 0;
+            padding: 0;
         }
 
-        #header {
+        header {
+            background-color: #333;
+            color: #fff;
             text-align: center;
-            padding: 20px;
+            padding: 20px 0;
         }
 
-        #header img {
+        header img {
             width: 150px;
+            height: 150px;
             border-radius: 50%;
+            border: 2px solid #fff;
         }
 
         #title {
             text-align: center;
-            font-size: 24px;
-            margin: 20px;
+            font-size: 36px;
+            margin: 20px 0;
         }
 
         #introduction {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
             text-align: center;
-            font-size: 16px;
+            font-size: 18px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
         #download-cv {
             text-align: center;
-            margin: 20px;
+            margin: 20px 0;
         }
 
         #download-cv a, #linkedin a {
             text-decoration: none;
             color: #0077B5;
-            margin: 0 10px;
+            margin: 0 20px;
+            font-size: 24px;
+        }
+
+        #download-cv a:hover, #linkedin a:hover {
+            color: #005783;
         }
 
         #linkedin {
             text-align: center;
+            margin: 20px 0;
         }
     </style>
 </head>
 <body>
-    <div id="header">
+    <header>
         <img src="my_pic_mh.jfif" alt="Your Picture">
-    </div>
-
-    <div id="title">
-        Your Title Job
-    </div>
+        <div id="title">
+            Your Title Job
+        </div>
+    </header>
 
     <div id="introduction">
-        An experienced professional with a strong background in [Your Field]. Passionate about [Your Interests] and dedicated to [Your Values]. 
+        <p>An experienced professional with a strong background in [Your Field]. Passionate about [Your Interests] and dedicated to [Your Values]. </p>
     </div>
 
     <div id="download-cv">
         <a href="https://drive.google.com/file/d/1P4Nx2C7UrQaUDwDkEpKljv49Vd9TakFk/view?usp=sharing" target="_blank">
-            <img src="cv_icon.png" alt="Download CV" width="24" height="24"> Download CV
+            <i class="fa fa-download"></i> Download CV
         </a>
     </div>
 
     <div id="linkedin">
         <a href="https://www.linkedin.com/in/mohammadhosseinkhojaste/" target="_blank">
-            <img src="linkedin_icon.png" alt="LinkedIn" width="24" height="24"> LinkedIn Profile
+            <i class="fa fa-linkedin"></i> LinkedIn Profile
         </a>
     </div>
 </body>
