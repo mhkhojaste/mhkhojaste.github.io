@@ -3,38 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>Mohammad Hossein Khojasteh - CV</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
             background-color: #f3f3f3;
-            margin: 0;
-            padding: 0;
         }
 
-        header {
+        .header {
             background-color: #333;
             color: #fff;
             text-align: center;
-            padding: 20px 0;
+            padding: 50px 0;
         }
 
-        header img {
+        .profile-image {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             border: 2px solid #fff;
         }
 
-        #title {
-            text-align: center;
+        .title {
             font-size: 36px;
             margin: 20px 0;
         }
 
-        #introduction {
-            max-width: 800px;
-            margin: 0 auto;
+        .introduction {
             text-align: center;
             font-size: 18px;
             padding: 20px;
@@ -43,46 +41,33 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
-        #download-cv {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        #download-cv img, #linkedin img {
-            width: 48px;
-            height: 48px;
-            margin: 0 20px;
-            cursor: pointer;
-        }
-
-        #linkedin {
-            text-align: center;
-            margin: 20px 0;
+        .download-link, .linkedin-link {
+            font-size: 24px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <img src="my_pic_mh.jfif" alt="Your Picture">
-        <div id="title">
-            Your Title Job
+    <div class="container">
+        <div class="header">
+            <img src="my_pic_mh.jfif" alt="Your Picture" class="profile-image">
+            <div class="title">Your Title Job</div>
         </div>
-    </header>
 
-    <div id="introduction">
-        <p>An experienced professional with a strong background in [Your Field]. Passionate about [Your Interests] and dedicated to [Your Values]. </p>
-    </div>
-
-    <div id="download-cv">
-        <a href="https://drive.google.com/file/d/1P4Nx2C7UrQaUDwDkEpKljv49Vd9TakFk/view?usp=sharing" target="_blank">
-            <img src="download-icon.png" alt="Download CV">
-        </a>
-    </div>
-
-    <div id="linkedin">
-        <a href="https://www.linkedin.com/in/mohammadhosseinkhojaste/" target="_blank">
-            <img src="linkedin-icon.png" alt="LinkedIn Profile">
-        </a>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="introduction">
+                    <p>An experienced professional with a strong background in [Your Field]. Passionate about [Your Interests] and dedicated to [Your Values]. </p>
+                </div>
+                <div class="text-center">
+                    <a href="https://drive.google.com/file/d/1P4Nx2C7UrQaUDwDkEpKljv49Vd9TakFk/view?usp=sharing" target="_blank" class="download-link">
+                        <i class="fa fa-download"></i> Download CV
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohammadhosseinkhojaste/" target="_blank" class="linkedin-link">
+                        <i class="fa fa-linkedin"></i> LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
