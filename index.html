@@ -1,73 +1,214 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Mohammad Hossein Khojasteh - CV</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Homepage of Mohammad Hossein Khojasteh">
+    <meta name="author" content="Mohammad Hossein Khojasteh">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/page.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="js/page.js"></script>
+    <script src="js/publications.json"></script>
+    <script src="js/publications.js"></script>
+
+    <title style="color: #1b3959;">Mohammad Hossein Khojasteh - CV</title>
+
     <style>
         body {
-            background-color: #f3f3f3;
-        }
-
-        .header {
-            background-color: #333;
+            background-color: #52606e;
             color: #fff;
-            text-align: center;
-            padding: 50px 0;
         }
 
-        .profile-image {
-            width: 150px;
-            height: 150px;
+        .navbar {
+            background-color: #000;
+        }
+
+        .nav-link {
+            color: #fff;
+        }
+
+        .navbar-expand {
+            justify-content: center;
+        }
+
+        .profile {
+            max-width: 300px;
+            border: 2px solid #007BFF;
             border-radius: 50%;
-            border: 2px solid #fff;
         }
 
-        .title {
-            font-size: 36px;
-            margin: 20px 0;
+        .intro {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .introduction {
-            text-align: center;
-            font-size: 18px;
-            padding: 20px;
+        .card-title {
+            color: #1b3959;
+        }
+
+        .btn {
+            margin: 5px;
             background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            color: #000;
+            text-align: center;
         }
 
-        .download-link, .linkedin-link {
-            font-size: 24px;
+        .btn:hover {
+            background-color: #1b3959;
+            color: #fff;
+        }
+
+        .lead {
+            color: #fff;
+        }
+
+        .list-group-item {
+            background-color: #fff;
+        }
+
+        .badge-primary {
+            background-color: #007BFF;
+        }
+
+        #cv-button {
+            margin-top: 10px;
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <img src="my_pic_mh.jfif" alt="Your Picture" class="profile-image">
-            <div class="title">Your Title Job</div>
-        </div>
 
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <div class="introduction">
-                    <p>An experienced professional with a strong background in [Your Field]. Passionate about [Your Interests] and dedicated to [Your Values]. </p>
+<body>
+    <nav class="navbar navbar-expand navbar-centered">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a id="about_nav" class="nav-link" href="#background_hd">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#publications_nav">Publications</a>
+            </li>
+        </ul>
+    </nav>
+
+    <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
+
+    <main id="background_hd" role="main" class="container pt-5">
+        <div class="card mb-3 pt-3 border-0">
+            <div class="row">
+                <div class="col-md-4 col-xs-12 text-center">
+                    <img src="img/my_pic_mh.jfif" class="profile thumbnail rounded-circle">
                 </div>
-                <div class="text-center">
-                    <a href="https://drive.google.com/file/d/1P4Nx2C7UrQaUDwDkEpKljv49Vd9TakFk/view?usp=sharing" target="_blank" class="download-link">
-                        <i class="fa fa-download"></i> Download CV
-                    </a>
-                    <a href="https://www.linkedin.com/in/mohammadhosseinkhojaste/" target="_blank" class="linkedin-link">
-                        <i class="fa fa-linkedin"></i> LinkedIn Profile
-                    </a>
+                <div class="col-md-8 col-xs-12 d-flex intro">
+                    <div class="card-body">
+                        <h1 class="card-title text-center text-monospace">Mohammad Hossein Khojasteh</h1>
+                        <div class="intro">
+                            <a class="btn" data-toggle="tooltip" title="Download CV" id="cv-button"
+                                href="https://drive.google.com/file/d/1P4Nx2C7UrQaUDwDkEpKljv49Vd9TakFk/view?usp=sharing">
+                                CV
+                            </a>
+                            <a class="btn" data-toggle="tooltip" title="LinkedIn"
+                                href="https://www.linkedin.com/in/mohammadhosseinkhojaste">
+                                <i class="fa fa-linkedin" aria-hidden="true" style="color: #007BFF;"></i> LinkedIn
+                            </a>
+                            <a class="btn" data-toggle="tooltip" title="Google Scholar"
+                                href="https://scholar.google.com/citations?user=m105gGEAAAAJ&hl=en&authuser=3">
+                                <i class="fa fa-graduation-cap" aria-hidden="true" style="color: #007BFF;"></i> Google Scholar
+                            </a>
+                        </div>
+                        <p class="card-text text-center text-monospace">
+                            <small class="text-muted"><u>mohammadhosseinkhojaste@gmail.com</u></small>
+                        </p>
+                        <p class="card-text text-center text-monospace" style="color: #000;">AI Researcher</p>
+                        <p class="card-text text-center text-monospace" style="color: #000;">Graduate Student</p>
+                        <p class="card-text text-center text-monospace" style="color: #000;">Iran University of Science and
+                            Technology (IUST)</p>
+                        <p class="card-text text-center text-monospace" style="color: #000;">Tehran, Iran</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-md-9 col-xs-12">
+                <h2 class="mt-4 text-center">About Me</h2>
+                <p class="lead text-justify">
+                    Hello! I'm Mohammad Hossein Khojasteh, a graduate holding an M.Sc. from <a
+                        href="http://www.iust.ac.ir/">Iran University of Science and Technology (IUST)</a>. Currently, I am
+                    working as a research assistant at the Data Mining Lab, working under the supervision of <a
+                        href="http://minaei.iust.ac.ir/">Prof. Behrouz Minaei-Bidgoli</a>. My interests lie around
+                    Neural-Symbolic models, Explainable AI, Reasoning, and Large Language Models (LLMs).
+                </p>
+            </div>
+            <div class="col"></div>
+        </div>
+
+        <h2 id="publications_nav" class="mt-5 text-center">Publications</h2>
+        <ul class="list-group" id="pubs_conf">
+            <li class="list-group-item pub-item" id="pub-11">
+                <div class="row d-flex flex-wrap align-items-center">
+                    <div class="col-md-3 d-none d-md-block">
+                        <img src="img/arch_english.jpg" width="100%" style="display: block; margin-left: auto;">
+                    </div>
+                    <div class="col-xs-12 col-md-9">
+                        <div style="color: #000;">
+                            <h3><b>Emulating the Human Mind: A Neural-symbolic Link Prediction Model with Fast and Slow Reasoning
+                                    and Filtered Rules</b> <span style="font-size: 14px;">[<a
+                                    href="https://arxiv.org/abs/2310.13996">Read more</a>]</span></h3>
+                        </div>
+                        <b style="color: #000;"> <u> Mohammad Hossein Khojasteh</u>, Najmeh Torabian, Ali Farjami, Saeid
+                            Hosseini, Behrouz Minaei-Bidgoli</b>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item pub-item" id="pub-12">
+                <div class="row d-flex flex-wrap align-items-center">
+                    <div class="col-md-3 d-none d-md-block">
+                        <img src="img/default_reasoner.png" width="100%" style="display: block; margin-left: auto;">
+                    </div>
+                    <div class="col-xs-12 col-md-9">
+                        <div style="color: #000;">
+                            <h3><b>Borhan: A Novel System for Prioritized Default Logic</b> <span style="font-size: 14px;">[<a
+                                    href="https://arxiv.org/abs/2310.13996">Read more</a>]</span></h3>
+                        </div>
+                        <b style="color: #000;">Alireza Shahbazi, <u> Mohammad Hossein Khojasteh</u>,
+                            Behrouz Minaei-Bidgoli</b>
+                    </div>
+                </div>
+            </li>
+            <li class="list-group-item pub-item" id="pub-13">
+                <div class="row d-flex flex-wrap align-items-center">
+                    <div class="col-md-3 d-none d-md-block">
+                        <img src="img/comapring.png" width="100%" style="display: block; margin-left: auto;">
+                    </div>
+                    <div class="col-xs-12 col-md-9">
+                        <div style="color: #000;">
+                            <h3><b>GMFIM: A Generative Mask-guided Facial Image Manipulation Model for Privacy Preservation</b>
+                                <span style="font-size: 14px;">[<a
+                                    href="https://www.sciencedirect.com/science/article/abs/pii/S0097849323000365">Read more</a>]</span>
+                            </h3>
+                        </div>
+                        <b style="color: #000;"><u> Mohammad Hossein Khojasteh</u>, Nastaran Moradzadeh Farid, Ahmad Nickabadi</b>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+    <footer class="footer">
+        <div class="container strip">
+			<span class="sm" id="modified" style="color: #fff;">Last modified: 10/28/2023</span>
+		</div>
+
+    </footer>
+
 </body>
+
 </html>
